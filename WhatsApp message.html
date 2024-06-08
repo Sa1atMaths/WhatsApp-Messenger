@@ -1,0 +1,134 @@
+<html>
+   <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+   
+    <style>
+        /* Set A4 size */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        @page {
+            size: A4;
+            margin: 0;
+        }
+ 
+        /* Set content to fill the entire A4 page */
+        html,
+        body {
+            width: device-width;/*210mm;*/
+            height: device-height/*297mm;*/
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+        /* Style content with shaded background */
+        .content {
+            width: 98%;
+            /* Adjust the width as needed */
+            height: 90%;
+            /* Adjust the height as needed*/
+            padding: 20px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            /* Light gray shade */
+        }
+    </style>
+
+ <title>Whatsapp Message</title>
+
+
+
+
+<style>
+input {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 5px;
+  text-align: center;
+}
+
+
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+  text-align: center;
+}
+
+
+textarea {
+  margin-top: 0.5rem;
+    width: 90%;
+   height: 20%;
+  padding: 5px;
+}
+
+textarea::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+  text-align: center;
+}
+
+</style>
+
+
+
+
+
+   <div class="content">
+<body>
+  
+  
+  <center>
+    
+  <label id="input1.1"> Enter Whatsapp Number</label>
+  <br><input id="input1" type="text" placeholder="Enter Mobile No."><br>
+  <label id="input2.1"> Enter Message</label>
+  <br><textarea id="input2"
+    placeholder="Enter your message."  cols="60">
+</textarea>
+    
+    <br>
+  <button onclick="openURL()">Open URL</button>
+    
+        <br> 
+        <br>
+        <br>
+
+
+    <!--<button onclick="displayme()">Display URL</button>-->
+    <p id="demo"></p>
+
+            </center>
+  
+</body>
+     <script>
+        function openURL() {
+          var url = "https://wa.me/91"+document.getElementById("input1").value +"?text="+ document.getElementById('input2').value;
+          url= url.replace(/(?:\r\n|\r|\n)/g, "%0A");
+      window.open(url, '_blank');
+    }
+
+  
+        function displayme() {
+var url = "https://wa.me/91"+document.getElementById("input1").value +"?text="+ document.getElementById('input2').value;
+               url= url.replace(/(?:\r\n|\r|\n)/g, "%0A");
+           url= url.replace(/ /g, "%20");
+document.getElementById("demo").innerHTML = url;
+        }
+    
+    
+
+    
+</script>
+</div>
+</html>
